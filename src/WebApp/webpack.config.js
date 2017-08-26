@@ -7,9 +7,9 @@ const bundleOutputDir = './wwwroot/dist';
 module.exports = (env) => {
     const isDevBuild = !(env && env.prod);
     return [{
-        stats: { modules: false },
-        entry: { 'main': './ClientApp/boot.jsx' },
-        resolve: { extensions: ['.js', '.jsx', '.ts', '.tsx'] },
+        stats: {modules: false},
+        entry: {'main': './ClientApp/boot.js'},
+        resolve: {extensions: ['.js', '.jsx', '.ts', '.tsx']},
         output: {
             path: path.join(__dirname, bundleOutputDir),
             filename: '[name].js',
@@ -17,17 +17,18 @@ module.exports = (env) => {
         },
         module: {
             rules: [
-                { test: /\.tsx?$/, include: /ClientApp/, use: 'awesome-typescript-loader?silent=true' },
-                { test: /\.css$/, use: isDevBuild ? ['style-loader', 'css-loader'] : ExtractTextPlugin.extract({ use: 'css-loader?minimize' }) },
-                { test: /\.(png|jpg|jpeg|gif|svg)$/, use: 'url-loader?limit=25000' },
+                {test: /\.tsx?$/, include: /ClientApp/, use: 'awesome-typescript-loader?silent=true'},
                 {
-                    test: /\.jsx$/,
+                    test: /\.css$/,
+                    use: isDevBuild ? ['style-loader', 'css-loader'] : ExtractTextPlugin.extract({use: 'css-loader?minimize'})
+                },
+                {test: /\.(png|jpg|jpeg|gif|svg)$/, use: 'url-loader?limit=25000'},
+                {
+                    test: /\.js$/,
                     exclude: /(node_modules|bower_components)/,
-                    use: {
-                        loader: 'babel-loader',
-                        options: {
-                            presets: ['env', 'react']
-                        }
+                    loader: 'babel-loader',
+                    query: {
+                        presets: ['react', 'es2015']
                     }
                 }
             ]
