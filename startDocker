@@ -1,0 +1,3 @@
+#!/bin/bash 
+
+docker run --name phone-book-search-postgres -p 8092:5432 -e POSTGRES_DB=phone-book-search -e POSTGRES_USER=phone-book-search -e POSTGRES_PASSWORD=phone-book-search --rm -d postgres
