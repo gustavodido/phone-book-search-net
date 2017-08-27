@@ -29,3 +29,7 @@ dotnet add WebApp.csproj package Dapper
 User ID=damienbod;Password=1234;Host=localhost;Port=5432;Database=damienbod;Pooling=true;
 
 ASPNETCORE_ENVIRONMENT
+
+    "Evolve.ConnectionString": "User ID=phone-book-search;Password=phone-book-search;Host=localhost;Port=8092;Database=phone-book-search;Pooling=true;",
+    "Evolve.Driver": "npgsql",
+    "Evolve.Locations": "Sql_Scripts",

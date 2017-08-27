@@ -35,6 +35,8 @@ namespace WebApp
             services.AddTransient<ContactsQuery, ContactsQuery>();
             services.AddTransient<SaveContactCommand, SaveContactCommand>();
             services.AddTransient<DeleteContactCommand, DeleteContactCommand>();
+            services.AddTransient<EvolveMigrations, EvolveMigrations>();
+
         }
 
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
@@ -53,6 +55,7 @@ namespace WebApp
                 app.UseExceptionHandler("/Home/Error");
             }
 
+            
             app.UseStaticFiles();
             app.UseMvc(routes =>
             {
@@ -64,6 +67,8 @@ namespace WebApp
                     "spa-fallback",
                     new { controller = "Home", action = "Index" });
             });
+
+            app.ApplicationServices.GetService<EvolveMigrations>().Migrate();
         }
     }
 }
