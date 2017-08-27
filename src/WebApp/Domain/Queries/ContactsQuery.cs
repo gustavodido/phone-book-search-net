@@ -6,7 +6,7 @@ namespace WebApp.Domain.Queries
 {
     public class ContactsQuery
     {
-        public IEnumerable<Contact> Run()
+        public virtual IEnumerable<Contact> Run()
         {
             return new[]
             {
