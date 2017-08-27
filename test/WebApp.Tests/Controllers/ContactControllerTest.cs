@@ -40,8 +40,6 @@ namespace WebApp.Tests.Controllers
         [Fact]
         public void ContactShouldBeAdded()
         {
-            A.CallTo(() => _saveContactCommand.Run(Constants.Gustavo)).DoesNothing();
-
             _contactController.Save(Constants.Gustavo);
             
             A.CallTo(() => _saveContactCommand.Run(Constants.Gustavo)).MustHaveHappened();
