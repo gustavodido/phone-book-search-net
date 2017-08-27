@@ -14,5 +14,4 @@ before_script:
   dotnet restore
 
 script:
-  dotnet build
-  dotnet test
+  dotnet build && dotnet test
