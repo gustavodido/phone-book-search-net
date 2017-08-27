@@ -4,6 +4,12 @@ sudo: required
 mono: none
 dotnet: 2.0.0
 
+deploy:
+  provider: heroku
+  app: phone-book-search-net
+  api_key:
+    secure: "425102f8-4b34-4f17-a4c6-3d6e2bc8c099"
+
 before_script:
   dotnet restore
 
