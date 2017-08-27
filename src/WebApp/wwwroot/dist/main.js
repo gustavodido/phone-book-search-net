@@ -59,7 +59,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "708167c1fe547eda64a5"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "d4bfbdbc08b2df2bbb0d"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
@@ -4841,6 +4841,8 @@ var PhoneBook = function (_React$Component) {
     }, {
         key: 'filterSearchResults',
         value: function filterSearchResults() {
+            console.log(this.state.rawContacts);
+
             var regEx = new RegExp(this.searchTerm, 'i');
 
             var filteredContacts = this.state.rawContacts.filter(function (contact) {

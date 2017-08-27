@@ -39,6 +39,8 @@ class PhoneBook extends React.Component {
     }
 
     filterSearchResults() {
+        console.log(this.state.rawContacts);
+        
         const regEx = new RegExp(this.searchTerm, 'i');
 
         const filteredContacts = this.state.rawContacts
