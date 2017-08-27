@@ -14,3 +14,14 @@ npm install
 
 Templates
 dotnet new --install Microsoft.AspNetCore.SpaTemplates::*
+
+
+brew install postgresql
+
+docker run --name phone-book-search-postgres -p 8092:5432 -e POSTGRES_DB=phone-book-search -e POSTGRES_USER=phone-book-search -e POSTGRES_PASSWORD=phone-book-search --rm -d postgres
+
+dotnet add [Project] package FakeItEasy
+dotnet add WebApp.csproj package Npgsql
+dotnet add WebApp.csproj package Dapper
+
+User ID=damienbod;Password=1234;Host=localhost;Port=5432;Database=damienbod;Pooling=true;

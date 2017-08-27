@@ -1,18 +1,29 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using System.Linq;
+using Npgsql;
 using WebApp.Domain.Entity;
+using Dapper;
+using Microsoft.Extensions.Options;
+using WebApp.Configuration;
 
 namespace WebApp.Domain.Queries
 {
     public class ContactsQuery
     {
+        private readonly IOptions<CustomConfiguration> _customConfiguration;
+
+        public ContactsQuery(IOptions<CustomConfiguration> customConfiguration)
+        {
+            _customConfiguration = customConfiguration;
+        }
+
         public virtual IEnumerable<Contact> Run()
         {
-            return new[]
-            {
-                new Contact(Guid.NewGuid(), "Gustavo", "Domenico", "123", "456", "789"),
-                new Contact(Guid.NewGuid(), "Tuany", "Domenico", "123", "456", "789")
-            };
+            using(var connection = new NpgsqlConnection(_customConfiguration.Value.ConnectionString)) {  
+                connection.Open();
+                
+                return connection.Query<Contact>(_customConfiguration.Value.ContactsQuery).ToList();
+            }
         }
     }
 }
