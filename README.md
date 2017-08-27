@@ -1,5 +1,7 @@
 # phone-book-search-net
 
+[![Build Status](https://travis-ci.org/gustavodido/phone-book-search-net.svg?branch=master)](https://travis-ci.org/gustavodido/phone-book-search-net)
+
 1. Bootstrap the application
 
 Create solution
