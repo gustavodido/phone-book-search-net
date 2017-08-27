@@ -30,7 +30,8 @@ namespace WebApp
             services.Configure<CustomConfiguration>(Configuration);
 
             services.AddMvc();
-            
+
+            services.AddTransient<DbConnectionFactory, DbConnectionFactory>();
             services.AddTransient<ContactsQuery, ContactsQuery>();
             services.AddTransient<SaveContactCommand, SaveContactCommand>();
             services.AddTransient<DeleteContactCommand, DeleteContactCommand>();

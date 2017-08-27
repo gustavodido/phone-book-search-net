@@ -25,3 +25,5 @@ dotnet add WebApp.csproj package Npgsql
 dotnet add WebApp.csproj package Dapper
 
 User ID=damienbod;Password=1234;Host=localhost;Port=5432;Database=damienbod;Pooling=true;
+
+ASPNETCORE_ENVIRONMENT

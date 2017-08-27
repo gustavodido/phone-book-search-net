@@ -59,7 +59,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "d4bfbdbc08b2df2bbb0d"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "3f2a8e447f576fca4071"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
@@ -704,14 +704,14 @@
 /******/ 	__webpack_require__.h = function() { return hotCurrentHash; };
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return hotCreateRequire(247)(__webpack_require__.s = 247);
+/******/ 	return hotCreateRequire(248)(__webpack_require__.s = 248);
 /******/ })
 /************************************************************************/
 /******/ ([
 /* 0 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = (__webpack_require__(5))(7);
+module.exports = (__webpack_require__(4))(7);
 
 /***/ }),
 /* 1 */
@@ -1072,6 +1072,12 @@ module.exports = isArray;
 
 /***/ }),
 /* 4 */
+/***/ (function(module, exports) {
+
+module.exports = vendor_d1e1f440a898564f5017;
+
+/***/ }),
+/* 5 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var baseIsNative = __webpack_require__(138),
@@ -1092,12 +1098,6 @@ function getNative(object, key) {
 
 module.exports = getNative;
 
-
-/***/ }),
-/* 5 */
-/***/ (function(module, exports) {
-
-module.exports = vendor_d1e1f440a898564f5017;
 
 /***/ }),
 /* 6 */
@@ -1260,7 +1260,7 @@ module.exports = isObject;
 /* 11 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = (__webpack_require__(5))(31);
+module.exports = (__webpack_require__(4))(31);
 
 /***/ }),
 /* 12 */
@@ -1417,7 +1417,7 @@ module.exports = getMapData;
 /* 17 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var getNative = __webpack_require__(4);
+var getNative = __webpack_require__(5);
 
 /* Built-in method references that are verified to be native. */
 var nativeCreate = getNative(Object, 'create');
@@ -1806,7 +1806,7 @@ exports.push([module.i, "body {\n    padding-top: 60px;\n}\n\n.right-aligned {\n
 /* 28 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var getNative = __webpack_require__(4),
+var getNative = __webpack_require__(5),
     root = __webpack_require__(2);
 
 /* Built-in method references that are verified to be native. */
@@ -3008,7 +3008,7 @@ module.exports = castPath;
 /* 59 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var getNative = __webpack_require__(4);
+var getNative = __webpack_require__(5);
 
 var defineProperty = (function() {
   try {
@@ -3386,7 +3386,7 @@ function supportsProtoAssignment() {
 /* 71 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = (__webpack_require__(5))(100);
+module.exports = (__webpack_require__(4))(100);
 
 /***/ }),
 /* 72 */
@@ -3397,7 +3397,7 @@ module.exports = (__webpack_require__(5))(100);
 
 __webpack_require__(239);
 
-__webpack_require__(246);
+__webpack_require__(247);
 
 var _react = __webpack_require__(0);
 
@@ -3699,7 +3699,7 @@ if (module) {
 /* 75 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = (__webpack_require__(5))(97);
+module.exports = (__webpack_require__(4))(97);
 
 /***/ }),
 /* 76 */
@@ -4759,6 +4759,10 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
+var _jquery = __webpack_require__(245);
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
 var _NavBar = __webpack_require__(103);
 
 var _NavBar2 = _interopRequireDefault(_NavBar);
@@ -4856,7 +4860,7 @@ var PhoneBook = function (_React$Component) {
         key: 'handleOnContactClick',
         value: function handleOnContactClick(contact) {
             this.setState({ selectedContact: contact });
-            $("#contact-profile").modal();
+            (0, _jquery2.default)("#contact-profile").modal();
         }
     }, {
         key: 'handleOnContactRemoveClick',
@@ -4871,12 +4875,12 @@ var PhoneBook = function (_React$Component) {
         key: 'handleOnAddContactClick',
         value: function handleOnAddContactClick() {
             this.setState({ selectedContact: {} });
-            $("#contact-management").modal();
+            (0, _jquery2.default)("#contact-management").modal();
         }
     }, {
         key: 'handleOnEditButtonClick',
         value: function handleOnEditButtonClick() {
-            $("#contact-management").modal();
+            (0, _jquery2.default)("#contact-management").modal();
         }
     }, {
         key: 'handleOnSaveContactClick',
@@ -4887,8 +4891,8 @@ var PhoneBook = function (_React$Component) {
                 return self.refreshSearchResults();
             });
 
-            $("#contact-profile").modal("hide");
-            $("#contact-management").modal("hide");
+            (0, _jquery2.default)("#contact-profile").modal("hide");
+            (0, _jquery2.default)("#contact-management").modal("hide");
         }
     }, {
         key: 'handleOnSearchChange',
@@ -5090,7 +5094,7 @@ var ContactManagement = function (_React$Component) {
         var _this = _possibleConstructorReturn(this, (ContactManagement.__proto__ || Object.getPrototypeOf(ContactManagement)).call(this, props));
 
         _this.state = {
-            uuid: "",
+            uuid: "00000000-0000-0000-0000-000000000000",
             firstName: "",
             lastName: "",
             fullName: "",
@@ -6483,7 +6487,7 @@ function isSlowBuffer (obj) {
 /* 117 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var getNative = __webpack_require__(4),
+var getNative = __webpack_require__(5),
     root = __webpack_require__(2);
 
 /* Built-in method references that are verified to be native. */
@@ -6534,7 +6538,7 @@ module.exports = Hash;
 /* 119 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var getNative = __webpack_require__(4),
+var getNative = __webpack_require__(5),
     root = __webpack_require__(2);
 
 /* Built-in method references that are verified to be native. */
@@ -6547,7 +6551,7 @@ module.exports = Promise;
 /* 120 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var getNative = __webpack_require__(4),
+var getNative = __webpack_require__(5),
     root = __webpack_require__(2);
 
 /* Built-in method references that are verified to be native. */
@@ -6572,7 +6576,7 @@ module.exports = Uint8Array;
 /* 122 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var getNative = __webpack_require__(4),
+var getNative = __webpack_require__(5),
     root = __webpack_require__(2);
 
 /* Built-in method references that are verified to be native. */
@@ -11273,7 +11277,7 @@ var _slicedToArray = function () { function sliceIterator(arr, i) { var _arr = [
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _propTypes = __webpack_require__(245);
+var _propTypes = __webpack_require__(246);
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
@@ -15436,22 +15440,28 @@ module.exports = function(hash, moduleMap, options) {
 /* 244 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = (__webpack_require__(5))(3);
+module.exports = (__webpack_require__(4))(3);
 
 /***/ }),
 /* 245 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = (__webpack_require__(5))(9);
+module.exports = (__webpack_require__(4))(6);
 
 /***/ }),
 /* 246 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = (__webpack_require__(5))(96);
+module.exports = (__webpack_require__(4))(9);
 
 /***/ }),
 /* 247 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = (__webpack_require__(4))(96);
+
+/***/ }),
+/* 248 */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(73);

@@ -1,8 +1,9 @@
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using WebApp.Domain.Commands;
-using WebApp.Domain.Entity;
+using WebApp.Domain.Entities;
 using WebApp.Domain.Queries;
 
 namespace WebApp.Controllers
@@ -30,9 +31,9 @@ namespace WebApp.Controllers
         }
 
         [HttpPost]
-        public void Save(Contact contact)
+        public void Save([FromBody] Contact newContact)
         {
-            _saveContactCommand.Run(contact);
+            _saveContactCommand.Run(newContact);
         }
 
         [HttpDelete("/{uuid}")]

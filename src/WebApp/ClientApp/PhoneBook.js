@@ -1,4 +1,5 @@
 import React from 'react';
+import $ from "jquery";
 
 import NavBar from './containers/NavBar.js';
 import ResponsiveContainer from './containers/ResponsiveContainer.js';

@@ -12,4 +12,7 @@
   <ItemGroup>
     <ProjectReference Include="..\..\src\WebApp\WebApp.csproj" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Domain\Commands" />
+  </ItemGroup>
 </Project>

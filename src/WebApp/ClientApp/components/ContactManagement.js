@@ -18,7 +18,7 @@ class ContactManagement extends React.Component {
         super(props);
 
         this.state = {
-            uuid: "",
+            uuid: "00000000-0000-0000-0000-000000000000",
             firstName: "",
             lastName: "",
             fullName: "",

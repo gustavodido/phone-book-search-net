@@ -1,5 +1,5 @@
 ﻿using System;
-using WebApp.Domain.Entity;
+using WebApp.Domain.Entities;
 
 namespace WebApp.Tests.Common
 {

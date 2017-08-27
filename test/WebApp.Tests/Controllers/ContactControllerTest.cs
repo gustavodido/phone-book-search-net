@@ -3,7 +3,6 @@ using WebApp.Domain.Queries;
 using Xunit;
 using FakeItEasy;
 using WebApp.Domain.Commands;
-using WebApp.Domain.Entity;
 using WebApp.Tests.Common;
 
 namespace WebApp.Tests.Controllers

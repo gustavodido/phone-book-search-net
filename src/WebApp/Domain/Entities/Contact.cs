@@ -1,9 +1,14 @@
 ﻿using System;
 
-namespace WebApp.Domain.Entity
+namespace WebApp.Domain.Entities
 {
     public class Contact
     {
+        public Contact()
+        {
+            
+        }
+        
         public Contact(Guid uuid, string firstName, string lastName, string homePhone, string workPhone, string mobilePhone)
         {
             Uuid = uuid;
@@ -14,13 +19,13 @@ namespace WebApp.Domain.Entity
             MobilePhone = mobilePhone;
         }
 
-        public Guid Uuid { get; }
+        public Guid Uuid { get; set; }
 
-        public string FirstName { get; }
-        public string LastName { get; }
-        public string HomePhone { get; }
-        public string WorkPhone { get; }
-        public string MobilePhone { get; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public string HomePhone { get; set; }
+        public string WorkPhone { get; set; }
+        public string MobilePhone { get; set; }
         
         public string FullName => String.Format("{0} {1}", FirstName, LastName);
     }
