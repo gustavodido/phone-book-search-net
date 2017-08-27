@@ -36,8 +36,8 @@ namespace WebApp.Controllers
             _saveContactCommand.Run(newContact);
         }
 
-        [HttpDelete("/{uuid}")]
-        public void Delete(Guid uuid)
+        [HttpDelete("{uuid}")]
+        public void Delete([FromRoute] Guid uuid)
         {
             _deleteContactCommand.Run(uuid);
         } 

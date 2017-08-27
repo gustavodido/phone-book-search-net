@@ -11,7 +11,7 @@ const SearchResult = (props) => {
     const contactsFor = (letter) => {
         return (props.results[letter].map(contact => {
             return (
-                <Row hasBorder={ true }>
+                <Row hasBorder={ true } key={contact.uuid}>
                     <Column>
                         <div className="pull-left contact-name">
                             <a onClick={ () => props.onContactClick(contact) }>
@@ -47,7 +47,7 @@ const SearchResult = (props) => {
 
             { Object.keys(props.results).map(letter => {
                 return (
-                    <div>
+                    <div  key={letter}>
                         <Row hasBorder={ true }>
                             <Column>
                                 <div className="pull-left contact-letter"> { letter }</div>

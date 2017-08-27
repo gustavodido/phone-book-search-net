@@ -53,7 +53,7 @@ class ContactManagement extends React.Component {
                 <Row>
                     <Column size="6">
                         <FormGroup customClasses={this.state.firstNameError ? "has-error" : ""}>
-                            <label for="firstName">First name:</label>
+                            <label htmlFor="firstName">First name:</label>
                             <TextInput id="firstName"
                                        placeholder="ex: Gustavo"
                                        value={ this.state.firstName }
@@ -68,7 +68,7 @@ class ContactManagement extends React.Component {
                     </Column>
                     <Column size="6">
                         <FormGroup customClasses={this.state.lastNameError ? "has-error" : ""}>
-                            <label for="lastName">Last name:</label>
+                            <label htmlFor="lastName">Last name:</label>
                             <TextInput id="lastName"
                                        placeholder="ex: Domenico"
                                        value={ this.state.lastName }

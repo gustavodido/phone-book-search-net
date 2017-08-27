@@ -59,7 +59,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "3f2a8e447f576fca4071"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "de23deaff3eb4fd13548"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
@@ -4845,8 +4845,6 @@ var PhoneBook = function (_React$Component) {
     }, {
         key: 'filterSearchResults',
         value: function filterSearchResults() {
-            console.log(this.state.rawContacts);
-
             var regEx = new RegExp(this.searchTerm, 'i');
 
             var filteredContacts = this.state.rawContacts.filter(function (contact) {
@@ -5144,7 +5142,7 @@ var ContactManagement = function (_React$Component) {
                             { customClasses: this.state.firstNameError ? "has-error" : "" },
                             _react2.default.createElement(
                                 'label',
-                                { 'for': 'firstName' },
+                                { htmlFor: 'firstName' },
                                 'First name:'
                             ),
                             _react2.default.createElement(_TextInput2.default, { id: 'firstName',
@@ -5170,7 +5168,7 @@ var ContactManagement = function (_React$Component) {
                             { customClasses: this.state.lastNameError ? "has-error" : "" },
                             _react2.default.createElement(
                                 'label',
-                                { 'for': 'lastName' },
+                                { htmlFor: 'lastName' },
                                 'Last name:'
                             ),
                             _react2.default.createElement(_TextInput2.default, { id: 'lastName',
@@ -5487,7 +5485,7 @@ var SearchResult = function SearchResult(props) {
         return props.results[letter].map(function (contact) {
             return _react2.default.createElement(
                 _Row2.default,
-                { hasBorder: true },
+                { hasBorder: true, key: contact.uuid },
                 _react2.default.createElement(
                     _Column2.default,
                     null,
@@ -5543,7 +5541,7 @@ var SearchResult = function SearchResult(props) {
         Object.keys(props.results).map(function (letter) {
             return _react2.default.createElement(
                 'div',
-                null,
+                { key: letter },
                 _react2.default.createElement(
                     _Row2.default,
                     { hasBorder: true },
@@ -5738,7 +5736,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var ModalDialog = function ModalDialog(props) {
     return _react2.default.createElement(
         "div",
-        { className: "modal fade", tabindex: "-1", role: "dialog", id: props.modal },
+        { className: "modal fade", role: "dialog", id: props.modal },
         _react2.default.createElement(
             "div",
             { className: "modal-dialog", role: "document" },
