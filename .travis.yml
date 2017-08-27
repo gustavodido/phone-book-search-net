@@ -1,0 +1,6 @@
+language: csharp
+dist: trusty
+sudo: required
+mono: none
+script:
+  - dotnet restore
