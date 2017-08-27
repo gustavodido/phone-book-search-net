@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.SpaServices.Webpack;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
+using WebApp.Domain.Commands;
 using WebApp.Domain.Queries;
 
 namespace WebApp
@@ -25,7 +26,9 @@ namespace WebApp
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
+            
             services.AddTransient<ContactsQuery, ContactsQuery>();
+            services.AddTransient<SaveContactCommand, SaveContactCommand>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
